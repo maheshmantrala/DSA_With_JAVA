@@ -1,0 +1,5 @@
+Day 1 – Two Pointer Technique (Java Practice Guide)
+🔹 Concept Overview
+
+Two pointers means using two indexes (usually i and j) to move through the array — from start, end, or both directions.
+It helps reduce time complexity from O(n²) → O(n) in many problems.
