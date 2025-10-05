@@ -1,5 +1,82 @@
-Day 1 – Two Pointer Technique (Java Practice Guide)
+Two Pointer Technique (Java Practice Guide)
 🔹 Concept Overview
-
 Two pointers means using two indexes (usually i and j) to move through the array — from start, end, or both directions.
-It helps reduce time complexity from O(n²) → O(n) in many problems.
+It helps reduce time complexity from O(n²) → O(n) in many problems. 
+
+📘 Sliding Window Technique (Theory)
+🎯 Goal
+
+Efficiently solve problems where you need to check contiguous subarrays / substrings instead of recalculating from scratch every time.
+1️⃣ What is Sliding Window?
+Imagine you have a window (subarray or substring) of a certain size (or flexible size).
+
+Instead of recalculating everything for every possible window,
+→ slide the window across the array/string,
+→ update the result incrementally.
+
+This reduces time complexity from O(n²) to O(n) in many problems.
+
+2️⃣ Types of Sliding Windows
+🔹 Fixed-size window
+
+The window size is fixed (say k elements).
+
+Typical problem:
+
+“Find the maximum sum of any subarray of size k”
+
+Window moves from left to right, adding one new element and removing one old element.
+
+👉 Example:
+arr = [1,2,3,4,5], k=3
+
+Window1 = [1,2,3] → sum=6
+
+Slide → [2,3,4] → update sum → 9
+
+Slide → [3,4,5] → update sum → 12 ✅ answer
+
+🔹 Variable-size window
+
+The window size changes dynamically based on conditions.
+
+Useful for substring / subarray problems with constraints.
+
+Example:
+
+“Longest substring without repeating characters”
+
+“Smallest subarray with sum ≥ target”
+
+👉 Here, you expand the window until the condition is satisfied,
+and shrink it when the condition is violated.
+
+3️⃣ Steps to Apply Sliding Window
+
+Initialize pointers (usually left and right).
+
+Expand window by moving right.
+
+Update state (like sum, count, frequency map).
+
+If condition is violated → shrink window by moving left.
+
+Keep track of best answer during the process.
+
+4️⃣ Complexity
+
+Each element is added once and removed once → O(n) time.
+
+Space depends on what you store (HashMap, frequency array, etc).
+
+5️⃣ Real-world analogies
+
+A window sliding across a string of beads, always covering a section.
+
+A CCTV camera scanning fixed areas as it moves forward.
+
+⚡ In short:
+
+Fixed window → sums, averages, maximums of size k.
+
+Variable window → longest/shortest substring/subarray satisfying conditions.
