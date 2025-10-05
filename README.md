@@ -54,7 +54,7 @@ It includes theory notes, solved problems, and practice code for interview prepa
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/maheshmantraka/DSA_WITH_JAVA.git
+   git clone https://github.com/maheshmantrala/DSA_WITH_JAVA.git
    ```
 2. Open in **VS Code / IntelliJ**.
 3. Compile & run:
